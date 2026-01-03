@@ -5,22 +5,30 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  base: '/ev-charging-calculator/',
   plugins: [
     react(),
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icons/*.svg', 'icons/*.png'],
+      includeAssets: ['favicon.ico', 'icons/*.png'],
       manifest: {
         name: 'EV Charging Calculator',
         short_name: 'EV Calc',
         description: 'Calculate optimal charging speed for your electric vehicle',
         theme_color: '#7c3aed',
-        background_color: '#ffffff',
+        background_color: '#7c3aed',
         display: 'standalone',
         orientation: 'portrait',
         start_url: '/',
+        scope: '/',
+        id: '/',
         icons: [
+          {
+            src: '/icons/icon-64.png',
+            sizes: '64x64',
+            type: 'image/png',
+          },
           {
             src: '/icons/icon-192.png',
             sizes: '192x192',
@@ -30,9 +38,10 @@ export default defineConfig({
             src: '/icons/icon-512.png',
             sizes: '512x512',
             type: 'image/png',
+            purpose: 'any',
           },
           {
-            src: '/icons/icon-512.png',
+            src: '/icons/maskable-512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
