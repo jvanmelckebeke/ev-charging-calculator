@@ -46,7 +46,7 @@ export function ChargingChart({ data, targetPercent, isAchievable }: ChargingCha
               borderRadius: '0.5rem',
               fontSize: '0.875rem',
             }}
-            formatter={(value: number) => [`${value}%`, 'Battery']}
+            formatter={(value) => [`${value}%`, 'Battery']}
             labelFormatter={(label) => `Time: ${label}`}
           />
           <ReferenceLine

@@ -19,7 +19,7 @@ import {
 } from '@/lib/charging-calculator';
 import { useSettings } from '@/hooks/use-settings';
 import { ChargingChart } from '@/components/chart/ChargingChart';
-import { Lightning, Warning, Clock, Battery } from '@phosphor-icons/react';
+import { Lightning, Warning, Clock, BatteryCharging } from '@phosphor-icons/react';
 
 const TARGET_PRESETS = [
   { value: '80', label: '80%' },
@@ -64,7 +64,7 @@ export function Calculator() {
       <Card>
         <CardHeader className="pb-4">
           <CardTitle className="flex items-center gap-2 text-base">
-            <Battery className="size-5" weight="fill" />
+            <BatteryCharging className="size-5" weight="fill" />
             Vehicle & Battery
           </CardTitle>
         </CardHeader>

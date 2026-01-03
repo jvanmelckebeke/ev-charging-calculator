@@ -37,7 +37,7 @@ export function calculateCharging(input: CalculationInput): CalculationResult | 
   const { minSpeed, maxSpeed } = chargerConfig;
 
   const now = new Date();
-  let departureDate = new Date(departureTime);
+  const departureDate = new Date(departureTime);
 
   if (departureDate <= now) {
     departureDate.setDate(departureDate.getDate() + 1);
