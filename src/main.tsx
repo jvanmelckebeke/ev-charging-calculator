@@ -9,7 +9,7 @@ import { ReloadPrompt } from './components/pwa/ReloadPrompt.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <SettingsProvider>
         <App />
         <ReloadPrompt />
